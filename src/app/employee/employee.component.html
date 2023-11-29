@@ -1,0 +1,45 @@
+<form [formGroup]="loginForm" (ngSubmit)="bookdetails()">
+    <div class="m-4">
+        <label class="form-label" for="name">Book Name</label><br>
+        <input class="form-control" type="text" placeholder="Enter book name" formControlName="name">
+        <div class="text-danger" *ngIf="name && name.invalid && name.touched"> *Book Name required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Author">Author</label><br>
+        <input class="form-control" type="text" placeholder="Enter author name" formControlName="author">
+        <div class="text-danger" *ngIf="author && author.invalid && author.touched"> *Author required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Publication">Publication</label><br>
+        <input class="form-control" type="text" placeholder="Enter publication name" formControlName="publication">
+        <div class="text-danger" *ngIf="publication && publication.invalid && publication.touched"> *Publication required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Price">Price</label><br>
+        <input class="form-control" type="number" placeholder="Enter book price" formControlName="price">
+        <div class="text-danger" *ngIf="price && price.invalid && price.touched"> *Price required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Genre">Genre</label><br>
+        <input class="form-control" type="text" placeholder="Enter the genre" formControlName="genre">
+        <div class="text-danger" *ngIf="genre && genre.invalid && genre.touched"> *Genre required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Published date">Published date</label><br>
+        <input class="form-control" type="text" placeholder="Enter published date" formControlName="date">
+        <div class="text-danger" *ngIf="date && date.invalid && date.touched"> *Published date required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Country">Country</label><br>
+        <input class="form-control" type="text" placeholder="Enter country" formControlName="country">
+        <div class="text-danger" *ngIf="country && country.invalid && country.touched"> *Country required</div>
+    </div>
+    <div class="m-4">
+        <label class="form-label" for="Description">Description</label><br>
+        <input class="form-control" type="text" placeholder="Enter description" formControlName="description">
+        <div class="text-danger" *ngIf="description && description.invalid && description.touched"> *Description required</div>
+    </div>
+    <div class="col-md-12 text-center">
+        <button class="btn btn-primary m-4" [disabled]="loginForm.invalid">Submit</button>
+    </div>
+</form>
